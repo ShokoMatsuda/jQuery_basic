@@ -16,4 +16,15 @@ $(function () {
             console.log('趣味:' + $(this).val());
         });
     });
+        // 名前が入力されたら
+        $('[name="username"]').on("input", function() {
+            let input = $(this).val();
+
+            // 入力文字があればボタンを押せる、なければボタンを押せなくする
+            if (input) {
+                $("#check").prop('disabled', false);
+            } else{
+                $("#check").prop('disabled', ture);
+            }
+        });
 });
